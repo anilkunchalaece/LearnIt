@@ -1,6 +1,6 @@
 //Author : LearnIt Team
 int sensorPin = A0;
-int ledPin = 13;
+int ledPin = 12;
 int sensorValue;
 
 void setup(){
@@ -15,3 +15,7 @@ void loop(){
   digitalWrite(ledPin,LOW);
   delay(sensorValue);
 }
+
+
+
+

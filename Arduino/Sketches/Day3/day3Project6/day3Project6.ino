@@ -1,15 +1,22 @@
-//Author : team LearnIt
-//include servo library
 #include <Servo.h>
+
 Servo myservo;
-void setup(){
-  //attaches servo on pin 9
+int pos = 0;
+
+void setup() {
   myservo.attach(9);
-  myservo.write(150);
 }
 
-void loop(){
-  //do nothing
+void loop() {
+  for (pos = 0; pos <= 180; pos = pos+1) {
+    // in steps of 1 degree
+    myservo.write(pos);
+    delay(15);
+  }
+  for (pos = 180; pos >= 0; pos = pos-1) {
+    myservo.write(pos);
+    delay(15);
+  }
 }
 
 
